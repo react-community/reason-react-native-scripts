@@ -37,9 +37,7 @@ if (args.interactive && typeof stdin.setRawMode === 'function') {
   isInteractive = true;
 }
 
-bsb.run(() => {
-  packager.run(onReady, options, isInteractive);
-});
+packager.run(onReady, options, isInteractive);
 
 function onReady() {
   log(chalk.green('Packager started!\n'));

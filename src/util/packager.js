@@ -12,6 +12,7 @@ import spawn from 'cross-spawn';
 import ProgressBar from 'progress';
 import bunyan from '@expo/bunyan';
 import chalk from 'chalk';
+import { spawnBsbWatcherAsync } from './bsb';
 
 import log from './log';
 
@@ -63,11 +64,16 @@ function shouldIgnoreMsg(msg) {
     msg.indexOf('Warning: PropTypes has been moved to a separate package') >= 0;
 }
 
-function run(
+async function run(
   onReady: () => ?any,
   options: Object = {},
   isInteractive?: boolean = false
 ) {
+  // first, run bsb
+  log.withTimestamp('Starting BuckleScript watcher for building Reason code');
+  let { bsbChildProcess } = await spawnBsbWatcherAsync();
+  log.withTimestamp(chalk.green('BuckleScript watcher started'));
+
   let packagerReady = false;
   let needsClear = false;
   let logBuffer = '';
