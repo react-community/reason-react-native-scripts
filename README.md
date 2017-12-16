@@ -11,6 +11,8 @@ cd HelloWorldRe
 yarn start
 ```
 
+You will see some peerDependencies warnings, don't worry about it. I told you this was early and experimental, right? 😅
+
 ## Development
 
 `yarn && yarn start` will start a watcher that will build artifacts and place them in the build directory.

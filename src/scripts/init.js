@@ -10,12 +10,12 @@ import install from '../util/install';
 
 // UPDATE DEPENDENCY VERSIONS HERE
 const DEFAULT_DEPENDENCIES = {
-  expo: '^23.0.4',
+  expo: '^24.0.0',
   react: '16.0.0',
-  'react-native': '0.50.3',
+  'react-native': '0.51.0',
   'bs-platform': '^2.1.0',
-  'bs-react-native': '^0.3.0',
-  'reason-react': '0.2.4',
+  'bs-react-native': '~0.5.0',
+  'reason-react': '~0.3.0',
 };
 
 // TODO figure out how this interacts with ejection
