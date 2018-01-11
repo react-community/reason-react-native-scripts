@@ -8,6 +8,7 @@ Early, experimental version of BuckleScript / ReasonReact / bs-react-native supp
 yarn global add create-react-native-app
 create-react-native-app HelloWorldRe --scripts-version reason-react-native-scripts
 cd HelloWorldRe
+npm link bs-platform  # yarn link has an issue as of Nov '17: https://github.com/yarnpkg/yarn/issues/4655
 yarn start
 ```
 

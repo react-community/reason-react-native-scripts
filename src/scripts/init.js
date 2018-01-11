@@ -13,13 +13,13 @@ const DEFAULT_DEPENDENCIES = {
   expo: '^24.0.0',
   react: '16.0.0',
   'react-native': '0.51.0',
-  'bs-platform': '^2.1.0',
   'bs-react-native': '~0.5.0',
   'reason-react': '~0.3.0',
 };
 
 // TODO figure out how this interacts with ejection
 const DEFAULT_DEV_DEPENDENCIES = {
+  'bs-platform': '^2.1.0',
 };
 
 module.exports = async (
