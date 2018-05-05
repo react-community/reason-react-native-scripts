@@ -17,7 +17,7 @@ yarn-debug.log*
 yarn-error.log*
 
 #reason
-# see https://github.com/reasonml/reasonml.github.io/blob/source/docs/converting-from-js.md#tips about ignoring lib
+# see https://github.com/reasonml/reasonml.github.io/blob/e42d17ee53a058a6ce1efb00e6eba38326e47908/docs/converting-from-js.md#tips about ignoring lib
 lib/
 .merlin
 .bsb.lock
