@@ -113,6 +113,16 @@ https://github.com/npm/npm/issues/16991
 
   // Copy the files for the user
   await fse.copy(path.join(ownPath, 'template'), appPath);
+  
+  // Change the name in bsconfig.json to package's name
+  const appBsConfigPath: string = path.join(appPath, 'bsconfig.json');
+  const appBsConfig = JSON.parse(await fse.readFile(appBsConfigPath));
+  
+  appBsConfig.name = appName;
+  
+  // Write the new appBsConfig
+  await fse.writeFile(appBsConfigPath, JSON.stringify(appBsConfig, null, 2));
+
 
   // Rename gitignore after the fact to prevent npm from renaming it to .npmignore
   try {
